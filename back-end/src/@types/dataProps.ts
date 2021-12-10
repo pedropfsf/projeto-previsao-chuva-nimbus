@@ -5,12 +5,12 @@ export interface daysProps {
     idRainType: number;
 }
 
-export interface climateArrayProps {
-    id: string;
+export interface climateProps {
+    id?: string;
     district: string;
-    data: daysProps[];
+    days: daysProps[];
 }
 
 export interface dataProps {
-    climateArray: climateArrayProps[];
+    climateArray: climateProps[];
 }
