@@ -1,0 +1,40 @@
+{
+    "climateArray": [
+        {
+            "id": "hfdsaofasdfhasf",
+            "district": "Copacabana/RJ",
+            "data": [
+                {
+                    "hour": 13,
+                    "date": "08/12",
+                    "rainType": "Chuva Forte",
+                    "idRainType": 4
+                }
+            ]
+        },
+        {
+            "id": "hfdsaofasdfhasf",
+            "district": "Copacabana/RJ",
+            "data": [
+                {
+                    "hour": 13,
+                    "date": "08/12",
+                    "rainType": "Chuva Forte",
+                    "idRainType": 4
+                }
+            ]
+        },
+        {
+            "id": "hfdsaofasdfhasf",
+            "district": "Copacabana/RJ",
+            "data": [
+                {
+                    "hour": 13,
+                    "date": "08/12",
+                    "rainType": "Chuva Forte",
+                    "idRainType": 4
+                }
+            ]
+        }
+    ]
+}
