@@ -1,4 +1,7 @@
-import { climateProps } from "../@types/dataProps";
+import { 
+    climateProps,
+    responseSendHTMLProps
+} from "../@types";
 import { createID } from "../utils";
 
 import { data } from "../data"
@@ -20,18 +23,35 @@ export const createDataClimate = (request, response) => {
     const isDistrictIsNumber = typeof district === "number";
     const isDaysIsArray = Array.isArray(days);
 
-    function responseSendError(message:string) {
-        response.status(406).send(`
+    function responseSendHTML({
+        message,
+        status
+    }:responseSendHTMLProps) {
+        let colorTitleMessage = "";
+
+        if(status >= 100 && status <= 199) {
+            colorTitleMessage = "#00eeee";
+        } else if(status >= 200 && status <= 299) {
+            colorTitleMessage = "#00ee00";
+        } else if(status >= 300 && status <= 399) {
+            colorTitleMessage = "#800080";
+        } else if(status >= 400 && status <= 499) {
+            colorTitleMessage = "#bbbb00";
+        } else {
+            colorTitleMessage = "#bb0000";
+        }
+
+        response.status(status).send(`
             <div style="font-family: Arial">
                 <h1
                     style="
-                        color: #aa0022;
+                        color: ${colorTitleMessage};
                         font-weight: bold;
                         text-align: center;
                         font-size: 60px
                     "
                 >
-                    Error 406
+                    Error ${status}
                 </h1>
                 <p 
                     style="
@@ -45,11 +65,7 @@ export const createDataClimate = (request, response) => {
         `);
     }
 
-    if(isDistrictIsNumber) {
-        responseSendError("O bairro que você está tentando enviar é do tipo invalido, somente é permitido valor do bairro do tipo string(Texto) e não number(Número)");
-    } else if(!isDaysIsArray) {
-        responseSendError("Os dados de dia de chuva que você está tentando enviar não é do tipo array");
-    } else {
+    function sendData() {
         const ID = createID();
     
         const newData = {
@@ -60,6 +76,23 @@ export const createDataClimate = (request, response) => {
     
         data.climateArray.push(newData);
 
-        response.send("Salvo com sucesso");
+        responseSendHTML({
+            message: "Salvo com sucesso",
+            status: 200
+        })
+    }
+
+    if(isDistrictIsNumber) {
+        responseSendHTML({
+            message: "O bairro que você está tentando enviar é do tipo invalido, somente é permitido valor do bairro do tipo string(Texto) e não number(Número)",
+            status: 406
+        });
+    } else if(!isDaysIsArray) {
+        responseSendHTML({
+            message: "Os dados de dia de chuva que você está tentando enviar não é do tipo array",
+            status: 406
+        });
+    } else {
+        sendData();
     }
 }
