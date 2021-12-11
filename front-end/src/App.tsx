@@ -1,7 +1,20 @@
+import { 
+  Title, 
+  Select 
+} from './components';
+
+import styles from './style/home.module.scss';
+
 export default function App() {
+  const { main } = styles;
+
   return (
-    <div className="App">
-      <h1>Olá mundo</h1>
+    <div 
+      id={main} 
+      className="App"
+    >
+      <Title>Previsão de chuva Horária</Title>
+      {/* <Select/> */}
     </div>
   );
 }
