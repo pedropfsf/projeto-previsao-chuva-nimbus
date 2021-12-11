@@ -12,14 +12,17 @@ const Select = ({
             <select>
                 { 
                     data.map(
-                        (item:DataSelectProps) => {
+                        (item:DataSelectProps, index: number) => {
                             const { 
                                 text, 
                                 value 
                             } = item;
 
                             return ( 
-                                <option value={ value }>
+                                <option 
+                                    value={ value }
+                                    key={ index }
+                                >
                                     { text }
                                 </option>
                             )
