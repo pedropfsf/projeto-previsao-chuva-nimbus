@@ -1,26 +1,38 @@
-import { useState } from 'react';
+import { 
+  useState, 
+  useEffect,
+  useCallback
+} from 'react';
 
 import { 
   Title, 
-  Select 
+  // Select 
 } from './components';
 
-import { DataProps } from './@types';
+import { ClimateArrayProps } from './@types';
 
 import styles from './style/home.module.scss';
 
-async function getClimateData(data: DataProps[]) {
-  const response = await fetch("http://localhost:4444/api/getClimateAll");
 
-  console.log(response);
-}
 
 export default function App() {
+  const { main } = styles;
+  
   let [ data, setData ] = useState([]);
 
-  // getClimateData(data);
+  let getClimateArrayCallback = useCallback(async (data:any, setData: any) => {
+    const response = await fetch("http://localhost:4444/api/getClimateAll");
+  
+    const dataJson = await response.json();
+  
+    const array:ClimateArrayProps[] = JSON.parse(dataJson).climateArray;
+  
+    setData(array);
+  }, [ ]);
 
-  const { main } = styles;
+  useEffect(() => {
+    getClimateArrayCallback(data, setData);
+  }, [ ]);
 
   return (
     <div 

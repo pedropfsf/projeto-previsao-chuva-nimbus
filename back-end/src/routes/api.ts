@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 const router = express.Router();
 
 import { 
@@ -7,8 +8,8 @@ import {
     createDataClimate 
 } from '../controllers/climate';
 
+router.use(cors());
 router.get("/getClimateAll", getAll);
-
 router.post("/addDataClimate", bodyParser.json(), createDataClimate);
 
 export default router;

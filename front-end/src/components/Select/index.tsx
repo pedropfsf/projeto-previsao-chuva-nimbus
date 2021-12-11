@@ -1,4 +1,4 @@
-import { DataProps, SelectProps } from "../../@types";
+import { DataSelectProps, SelectProps } from "../../@types";
 
 const Select = ({ 
     label, 
@@ -12,7 +12,7 @@ const Select = ({
             <select>
                 { 
                     data.map(
-                        (item:DataProps) => {
+                        (item:DataSelectProps) => {
                             const { 
                                 text, 
                                 value 

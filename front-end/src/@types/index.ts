@@ -1,11 +1,19 @@
 import TitleProps from "./TitleProps";
 import { 
-    DataProps, 
+    DataSelectProps, 
     SelectProps 
 } from "./SelectProps";
+import { 
+    DaysProps, 
+    ClimateArrayProps, 
+    DataProps 
+} from "./dataProps";
 
 export type {
     TitleProps,
-    DataProps,
-    SelectProps
+    DataSelectProps,
+    SelectProps,
+    DaysProps,
+    ClimateArrayProps,
+    DataProps
 }

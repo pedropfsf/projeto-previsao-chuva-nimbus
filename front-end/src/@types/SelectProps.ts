@@ -1,14 +1,14 @@
-interface DataProps {
+interface DataSelectProps {
     value: string;
     text: string;
 }
 
 interface SelectProps {
     label: string;
-    data: DataProps[]
+    data: DataSelectProps[]
 }
 
 export type {
-    DataProps,
+    DataSelectProps,
     SelectProps
 }
