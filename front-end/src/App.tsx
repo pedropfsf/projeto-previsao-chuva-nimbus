@@ -11,12 +11,9 @@ import {
 
 import { 
   ClimateArrayProps, 
-  DataSelectProps
+  DataSelectProps,
+  RenderItensOfDistrictProps
 } from './@types';
-
-import {
-  renderItensOfDistrict
-} from './utils';
 
 import styles from './style/home.module.scss';
 
@@ -48,10 +45,25 @@ export default function App() {
     getClimateArray();
   }, [ ]);
 
+  function renderItensOfDistrict({ 
+      value, 
+      data 
+  }:RenderItensOfDistrictProps) {
+  const [ dataSelected ] = data.filter((item:ClimateArrayProps) => item.district === value);
+
+  return (
+      dataSelected.days.map(({ date }, index) => (
+              <span key={index}>{date}</span>
+          ))
+      )
+  }
+
   function changeSelect({ target }:any) {
     const value = target.value;
     setSelect(value);
   }
+
+
 
   return (
     <div 

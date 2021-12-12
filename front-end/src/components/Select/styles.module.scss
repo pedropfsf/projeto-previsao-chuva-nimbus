@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 24px;
+
+    .label {
+        font-weight: bold;
+        
+        margin-right: 18px;
+    }
+
+    .selectDistrict {
+        background-color: var(--background);
+
+        border: 2px solid var(--text);
+        border-radius: 12.5px;
+
+        padding: 7.5px;
+
+        option {
+            background-color: inherit;
+        }
+    }
+
+    .label,
+    .selectDistrict
+    {
+        font-size: 1.2rem;
+
+        color: var(--text);
+    }
+}

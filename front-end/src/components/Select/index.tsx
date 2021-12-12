@@ -1,16 +1,19 @@
 import { DataSelectProps, SelectProps } from "../../@types";
 
+import styles from './styles.module.scss';
+
 const Select = ({ 
     label, 
     data,
     setSelect
 }:SelectProps) => {
     return (
-        <div>
-            <span>
-                { label }
+        <div className={styles.container}>
+            <span className={styles.label}>
+                { label }:
             </span>
             <select
+                className={styles.selectDistrict}
                 onChange={setSelect}
                 defaultValue={"Selecione uma opção"}
             >
