@@ -11,6 +11,7 @@ import {
 import RenderItensOfDistrictProps from "./RenderItensOfDistrictProps";
 import MessageProps from "./MessageProps";
 import ContainerForDaysRainProps from "./ContainerForDaysRainProps";
+import ItemDayRainProps from "./ItemDayRainProps";
 
 export type {
     TitleProps,
@@ -21,5 +22,6 @@ export type {
     DataProps,
     RenderItensOfDistrictProps,
     MessageProps,
-    ContainerForDaysRainProps
+    ContainerForDaysRainProps,
+    ItemDayRainProps
 }

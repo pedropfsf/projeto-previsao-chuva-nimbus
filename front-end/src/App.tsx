@@ -54,9 +54,16 @@ export default function App() {
   const [ dataSelected ] = data.filter((item:ClimateArrayProps) => item.district === value);
 
   return (
-      dataSelected.days.map(({ date }, index) => (
+      dataSelected.days.map(({ 
+        hour, 
+        date, 
+        rainType 
+      }, index) => (
               <ItemDayRain
                 key={ index }
+                hour={ hour }
+                date={ date }
+                rainType={ rainType }
               />
           ))
       )
@@ -67,33 +74,30 @@ export default function App() {
     setSelect(value);
   }
 
-
-
   return (
-    <div 
-      id={main} 
-      className="App"
-    >
-      <Title>Previsão de chuva Horária</Title>
-      <Select
-        label="Bairro"
-        data={ districts }
-        setSelect={ changeSelect }
-      />
-      <ContainerForDaysRain>
-        {
-          select === "Selecione uma opção"
-          ?
-          <Message>
-            Nenhuma opção selecionada {":("}
-          </Message>
-          :
-          renderItensOfDistrict({
-            value: select,
-            data
-          })
-        }
-      </ContainerForDaysRain>
+    <div className="App">
+      <main id={main}>
+        <Title>Previsão de chuva Horária</Title>
+        <Select
+          label="Bairro"
+          data={ districts }
+          setSelect={ changeSelect }
+        />
+        <ContainerForDaysRain>
+          {
+            select === "Selecione uma opção"
+            ?
+            <Message>
+              Nenhuma opção selecionada {":("}
+            </Message>
+            :
+            renderItensOfDistrict({
+              value: select,
+              data
+            })
+          }
+        </ContainerForDaysRain>
+      </main>
     </div>
   );
 }

@@ -1,0 +1,29 @@
+.area {
+    padding: 20px;
+
+    background-color: var(--background);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 2px solid var(--border-items);
+    border-radius: 20px;
+
+    margin: 10px;
+
+    width: 200px;
+
+    .textOfHourAndDate {
+        font-size: 1.2rem;
+        
+        color: var(--text);
+
+        margin-bottom: 8px;
+    }
+    
+    .textRainType {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+}

@@ -5,16 +5,22 @@
             "district": "Copacabana/RJ",
             "days": [
                 {
-                    "hour": 13,
-                    "date": "08/12",
-                    "rainType": "Chuva Forte",
-                    "idRainType": 4
+                    "hour": 12,
+                    "date": "02/12",
+                    "rainType": "Sem Chuva",
+                    "idRainType": 1
                 },
                 {
-                    "hour": 13,
-                    "date": "08/12",
-                    "rainType": "Chuva Forte",
-                    "idRainType": 4
+                    "hour": 11,
+                    "date": "04/12",
+                    "rainType": "Chuva Fraca",
+                    "idRainType": 2
+                },
+                {
+                    "hour": 15,
+                    "date": "05/12",
+                    "rainType": "Chuva Moderada",
+                    "idRainType": 3
                 },
                 {
                     "hour": 13,
