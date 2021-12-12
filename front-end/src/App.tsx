@@ -6,7 +6,9 @@ import {
 import { 
   Title, 
   Select,
-  Message
+  Message,
+  ItemDayRain,
+  ContainerForDaysRain
 } from './components';
 
 import { 
@@ -53,7 +55,9 @@ export default function App() {
 
   return (
       dataSelected.days.map(({ date }, index) => (
-              <span key={index}>{date}</span>
+              <ItemDayRain
+                key={ index }
+              />
           ))
       )
   }
@@ -76,18 +80,20 @@ export default function App() {
         data={ districts }
         setSelect={ changeSelect }
       />
-      {
-        select === "Selecione uma opção"
-        ?
-        <Message>
-          Nenhuma opção selecionada {":("}
-        </Message>
-        :
-        renderItensOfDistrict({
-          value: select,
-          data
-        })
-      }
+      <ContainerForDaysRain>
+        {
+          select === "Selecione uma opção"
+          ?
+          <Message>
+            Nenhuma opção selecionada {":("}
+          </Message>
+          :
+          renderItensOfDistrict({
+            value: select,
+            data
+          })
+        }
+      </ContainerForDaysRain>
     </div>
   );
 }

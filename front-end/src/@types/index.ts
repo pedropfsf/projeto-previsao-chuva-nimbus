@@ -10,6 +10,7 @@ import {
 } from "./dataProps";
 import RenderItensOfDistrictProps from "./RenderItensOfDistrictProps";
 import MessageProps from "./MessageProps";
+import ContainerForDaysRainProps from "./ContainerForDaysRainProps";
 
 export type {
     TitleProps,
@@ -19,5 +20,6 @@ export type {
     ClimateArrayProps,
     DataProps,
     RenderItensOfDistrictProps,
-    MessageProps
+    MessageProps,
+    ContainerForDaysRainProps
 }
