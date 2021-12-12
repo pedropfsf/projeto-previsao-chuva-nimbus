@@ -9,6 +9,18 @@
                     "date": "08/12",
                     "rainType": "Chuva Forte",
                     "idRainType": 4
+                },
+                {
+                    "hour": 13,
+                    "date": "08/12",
+                    "rainType": "Chuva Forte",
+                    "idRainType": 4
+                },
+                {
+                    "hour": 13,
+                    "date": "08/12",
+                    "rainType": "Chuva Forte",
+                    "idRainType": 4
                 }
             ]
         },
@@ -18,7 +30,7 @@
             "days": [
                 {
                     "hour": 13,
-                    "date": "08/12",
+                    "date": "03/12",
                     "rainType": "Chuva Forte",
                     "idRainType": 4
                 }
@@ -30,7 +42,7 @@
             "days": [
                 {
                     "hour": 13,
-                    "date": "08/12",
+                    "date": "02/12",
                     "rainType": "Chuva Forte",
                     "idRainType": 4
                 }

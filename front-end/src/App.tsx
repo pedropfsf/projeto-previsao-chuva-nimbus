@@ -1,7 +1,6 @@
 import { 
   useState, 
-  useEffect,
-  useCallback
+  useEffect
 } from 'react';
 
 import { 
@@ -11,9 +10,12 @@ import {
 
 import { 
   ClimateArrayProps, 
-  DataSelectProps,
-  RenderItensOfDistrictProps
+  DataSelectProps
 } from './@types';
+
+import {
+  renderItensOfDistrict
+} from './utils';
 
 import styles from './style/home.module.scss';
 
@@ -48,19 +50,6 @@ export default function App() {
   function changeSelect({ target }:any) {
     const value = target.value;
     setSelect(value);
-  }
-
-  function renderItensOfDistrict({ 
-    value, 
-    data 
-  }:RenderItensOfDistrictProps) {
-    const [ dataSelected ] = data.filter((item:ClimateArrayProps) => item.district === value);
-    
-    return (
-      dataSelected.days.map(({ date }) => (
-        <span key={date}>{date}</span>
-      ))
-    )
   }
 
   return (
