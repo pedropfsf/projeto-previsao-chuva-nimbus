@@ -5,7 +5,8 @@ import {
 
 import { 
   Title, 
-  Select 
+  Select,
+  Message
 } from './components';
 
 import { 
@@ -66,7 +67,9 @@ export default function App() {
       {
         select === "Selecione uma opção"
         ?
-        <h1>Nenhuma opção selecionada ${":("}</h1>
+        <Message>
+          Nenhuma opção selecionada {":("}
+        </Message>
         :
         renderItensOfDistrict({
           value: select,
