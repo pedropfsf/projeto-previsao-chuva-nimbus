@@ -45,6 +45,40 @@ pode usar qualquer ferramenta que quiser
 
 para testar a api usei o insomnia
 
+Fiz dois endpoints como foi pedido no desafio,
+As seguintes rotas são:
+
+- Get = localhost:4444/api/getClimateAll 
+retorna um json com os dados da api
+
+- Post = localhost:4444/api/addDataClimate
+Envia os dados em formato json para api
+
+O formato para envio de dados no post tem que ser
+
+<pre>
+ {
+  "district": "São Paulo/SP",
+  "days": [
+    {
+      "hour": 13,
+      "date": "08/12",
+      "rainType": "Chuva Forte",
+      "idRainType": 4
+    }
+  ]
+ }
+</pre>
+
+- district: valor string que representa o bairro
+- days: um array que recebe os dados dos dias de chuva de um determinado bairro
+
+no objeto dentro de days
+- hour: um number que representa a hora da previsão de chuva
+- date: um string que representa a data da previsão de chuva
+- rainType: um string que representa o tipo de chuva, se foi forte, fraco, moderado
+- idRainType: o identificador para o objeto
+
 ## Como usar
 
 Clona o meu repositório
