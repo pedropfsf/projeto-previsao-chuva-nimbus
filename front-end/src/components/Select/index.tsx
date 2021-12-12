@@ -2,14 +2,23 @@ import { DataSelectProps, SelectProps } from "../../@types";
 
 const Select = ({ 
     label, 
-    data 
+    data,
+    setSelect
 }:SelectProps) => {
     return (
         <div>
             <span>
                 { label }
             </span>
-            <select>
+            <select
+                onChange={setSelect}
+                defaultValue={"Selecione uma opção"}
+            >
+                <option 
+                    value="Selecione uma opção"
+                >
+                    Selecione uma opção
+                </option>
                 { 
                     data.map(
                         (item:DataSelectProps, index: number) => {

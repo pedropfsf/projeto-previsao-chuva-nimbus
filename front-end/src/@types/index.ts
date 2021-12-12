@@ -8,6 +8,7 @@ import {
     ClimateArrayProps, 
     DataProps 
 } from "./dataProps";
+import RenderItensOfDistrictProps from "./RenderItensOfDistrictProps";
 
 export type {
     TitleProps,
@@ -15,5 +16,6 @@ export type {
     SelectProps,
     DaysProps,
     ClimateArrayProps,
-    DataProps
+    DataProps,
+    RenderItensOfDistrictProps
 }

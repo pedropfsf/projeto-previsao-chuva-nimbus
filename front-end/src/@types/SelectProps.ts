@@ -5,7 +5,8 @@ interface DataSelectProps {
 
 interface SelectProps {
     label: string;
-    data: DataSelectProps[]
+    data: DataSelectProps[];
+    setSelect: (object:any) => void;
 }
 
 export type {
