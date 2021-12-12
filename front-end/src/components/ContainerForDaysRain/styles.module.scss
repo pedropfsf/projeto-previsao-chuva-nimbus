@@ -6,5 +6,11 @@
 
     margin-top: 24px;
 
-    width: 53.5vw;
+    width: 52.6vw;
+}
+
+@media screen and (max-width: 693px) {
+    .container {
+        width: 100%;
+    }
 }

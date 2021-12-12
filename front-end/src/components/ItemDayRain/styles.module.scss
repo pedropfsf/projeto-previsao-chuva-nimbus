@@ -27,3 +27,33 @@
         font-size: 1.1rem;
     }
 }
+
+@media screen and (max-width: 1207px) {
+    .area {
+        width: 46%;
+    }
+}
+
+@media screen and (max-width: 973px) {
+    .area {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .area {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 561px) {
+    .area {
+        .textOfHourAndDate {
+            font-size: 1.8rem;
+        }
+
+        .textRainType {
+            font-size: 1.65rem;
+        }
+    }
+}

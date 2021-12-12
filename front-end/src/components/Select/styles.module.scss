@@ -32,3 +32,14 @@
         color: var(--text);
     }
 }
+
+@media screen and (max-width: 356px) {
+    .container {
+        flex-direction: column;
+
+        .label {
+            margin-right: 0;
+            margin-bottom: 18px;
+        }
+    }
+}
